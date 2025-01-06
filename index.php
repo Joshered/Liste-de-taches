@@ -20,7 +20,12 @@ $taches = $soum -> fetchAll();
         <?php foreach ($taches as $tache): ?>
             <li>
                 <?php if($tache['tach_accomplies']):?>
+                    <tricke><?php echo htmlspecialchars($tache['tache']);?></tricke>
+                    <?php else: ?>
+                        <?php echo htmlspecialchars($tache['tache']);?>
+                        <a href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">[supprimer]</a>
             </li>
+        <?php endforeach; ?>
     </ul>
 </body>
 </html>
