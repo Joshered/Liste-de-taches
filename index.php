@@ -12,6 +12,15 @@ $taches = $soum -> fetchAll();
 </head>
 <body>
     <h1>lust des taches</h1>
-    <form action="ajout_tache.php" method="POST"></form>
+    <form action="ajout_tache.php" method="POST">
+        <input type="text" name='tache' placeholder="nouvelle teche" required>
+        <input type="submit" value='ajouter'>
+    </form>
+    <ul>
+        <?php foreach ($taches as $tache): ?>
+            <li>
+                <?php if($tache['tach_accomplies']):?>
+            </li>
+    </ul>
 </body>
 </html>
