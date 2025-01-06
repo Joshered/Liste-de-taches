@@ -27,10 +27,11 @@ $taches = $soum -> fetchAll();
                     <tricke><?php echo htmlspecialchars($tache['tache']);?></tricke>
                     <?php else: ?>
                         <?php echo htmlspecialchars($tache['tache']);?>
-                        <?php echo htmlspecialchars($tache['id_tach']);?>
                         <a class='aa' href="taches_termin.php?id_tach=<?php echo $tache['id_tach'];?>">cocher comme termner</a>
                         <?php endif;?>
                         <a class='aaa' href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">supprimer</a>
+                        <label for="" class='aab'> <?php echo htmlspecialchars($tache['date_d']);?> </label>
+                        
             </li>
         <?php endforeach; ?>
     </ol>
