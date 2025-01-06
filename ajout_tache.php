@@ -7,6 +7,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $soum = $pdo->prepare("INSERT  INTO taches(tache) VALUES (:tache)");
     $soum -> execute(['tache'=>$tache]);
 
-    header('location: index.php')
+    header('location: index.php');
 }
 ?>
