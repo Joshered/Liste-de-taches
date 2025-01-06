@@ -18,7 +18,7 @@ $taches = $soum -> fetchAll();
     
     <form action="ajout_tache.php" method="POST">
         <input type="text" name='tache' placeholder="nouvelle teche" required>
-        <input type="submit" value='ajouter'>
+        <input class='btn' type="submit" value='ajouter'>
     </form>
     <ul>
         <?php foreach ($taches as $tache): ?>
