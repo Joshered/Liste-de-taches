@@ -11,7 +11,10 @@ $taches = $soum -> fetchAll();
     <title>Gestion de tachest</title>
 </head>
 <body>
-    <h1>lust des taches</h1>
+    <header>
+        <h1>lust des taches</h1>
+    </header>
+    
     <form action="ajout_tache.php" method="POST">
         <input type="text" name='tache' placeholder="nouvelle teche" required>
         <input type="submit" value='ajouter'>
