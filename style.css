@@ -22,15 +22,18 @@ li{
     font-size: 25px;
 }
 .aa{
-    padding-left: 200px;
+    margin-left: 200px;
     text-decoration: none;
     color: #4CAF50;
 }
 .aaa{
-    padding-left: 50px;
+    margin-left: 10px;
     text-decoration: none;
     color: #eb4319;
 }
 .aab{
-    padding-left: 50px;
+    margin-left: 10px;
+}
+a:hover{
+    color: black;
 }
