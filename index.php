@@ -23,6 +23,8 @@ $taches = $soum -> fetchAll();
                     <tricke><?php echo htmlspecialchars($tache['tache']);?></tricke>
                     <?php else: ?>
                         <?php echo htmlspecialchars($tache['tache']);?>
+                        <a href="taches_termin.php?id_tach=<?php echo $tache['id_tach'];?>">[terminer]</a>
+                        <?php endif;?>
                         <a href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">[supprimer]</a>
             </li>
         <?php endforeach; ?>
