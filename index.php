@@ -27,9 +27,9 @@ $taches = $soum -> fetchAll();
                     <tricke><?php echo htmlspecialchars($tache['tache']);?></tricke>
                     <?php else: ?>
                         <?php echo htmlspecialchars($tache['tache']);?>
-                        <a href="taches_termin.php?id_tach=<?php echo $tache['id_tach'];?>">[terminer]</a>
+                        <a class='aa' href="taches_termin.php?id_tach=<?php echo $tache['id_tach'];?>">cocher comme termner</a>
                         <?php endif;?>
-                        <a href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">[supprimer]</a>
+                        <a class='aaa' href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">supprimer</a>
             </li>
         <?php endforeach; ?>
     </ul>
