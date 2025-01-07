@@ -35,5 +35,6 @@ $taches = $soum -> fetchAll();
             </li>
         <?php endforeach; ?>
     </ol>
+    <script type='text/javascript' src="script.js"></script>
 </body>
 </html>
