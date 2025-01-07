@@ -1,5 +1,5 @@
 
-var par =document(".aa");
+var par =document.querySelector(".aa");
 window.setInterval(
     function(){
         par.classLister.toggle("coul2");
