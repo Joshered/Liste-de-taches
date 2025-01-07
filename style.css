@@ -25,6 +25,7 @@ li{
     margin-left: 200px;
     text-decoration: none;
     color: #4CAF50;
+    transition: color 1s;
 }
 .aaa{
     margin-left: 10px;
