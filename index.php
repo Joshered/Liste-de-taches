@@ -13,7 +13,7 @@ $taches = $soum -> fetchAll();
 </head>
 <body>
     <header>
-        <h1>List des taches</h1>
+        <h1>Liste des taches</h1>
     </header>
     
     <form action="ajout_tache.php" method="POST">
