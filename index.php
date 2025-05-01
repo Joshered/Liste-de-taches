@@ -23,8 +23,7 @@ $taches = $soum -> fetchAll();
             </div>
             <div class='col-lg-3 d-flex flex-row-reverse flex-lg-row'>
              <input class='col-lg-4 btn btn-success' type="submit" value='ajouter'>
-            </div>
-            
+            </div>          
             
         </form>
         <!-- Affichage -->
@@ -35,10 +34,14 @@ $taches = $soum -> fetchAll();
                         <tricke><?php echo htmlspecialchars($tache['tache']);?></tricke>
                         <?php else: ?>
                             <?php echo htmlspecialchars($tache['tache']);?>
-                            <a class='aa' href="taches_termin.php?id_tach=<?php echo $tache['id_tach'];?>">cocher comme termner</a>
-                            <?php endif;?>
-                            <a class='aaa' href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">supprimer</a>
-                            <label for="" class='aab'> <?php echo htmlspecialchars($tache['date_d']);?> </label>
+                            <label for="" class='d-flex justify-content-end'> <?php echo "à ". htmlspecialchars($tache['date_d']);?> </label>
+                            <div class="container">
+                                <a class='btn shadow-sm text-success' href="taches_termin.php?id_tach=<?php echo $tache['id_tach'];?>">cocher comme termner</a>
+                                <?php endif;?>
+                                <a class='btn shadow-sm' href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">supprimer</a>
+                                <hr>
+                                
+                            </div>
                             
                 </li>
             <?php endforeach; ?>
