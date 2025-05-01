@@ -17,7 +17,7 @@ $taches = $soum -> fetchAll();
     </header>
     <section class='container-fluid- container-lg'>
         <!-- Espace Ajouter Tache -->
-        <form action="ajout_tache.php" method="POST" class='row'>
+        <form action="ajout_tache.php" method="POST" class='row mb-3'>
             <div class='col-lg-9'>
                 <input class="form-control md-2 form-control" type="text" name='tache' placeholder="nouvelle teche" required>
             </div>
@@ -27,20 +27,19 @@ $taches = $soum -> fetchAll();
             
         </form>
         <!-- Affichage -->
-        <ol type='1'>
+        <ol type='1' class="list-goup list-group-numbered ">
             <?php foreach ($taches as $tache): ?>
-                <li>
+                <li class="list-group-item ">
                     <?php if($tache['tach_accomplies']):?>
                         <tricke><?php echo htmlspecialchars($tache['tache']);?></tricke>
                         <?php else: ?>
-                            <?php echo htmlspecialchars($tache['tache']);?>
+                            <?php  echo htmlspecialchars($tache['tache']);?>
                             <label for="" class='d-flex justify-content-end'> <?php echo "à ". htmlspecialchars($tache['date_d']);?> </label>
                             <div class="container">
                                 <a class='btn shadow-sm text-success' href="taches_termin.php?id_tach=<?php echo $tache['id_tach'];?>">cocher comme termner</a>
                                 <?php endif;?>
-                                <a class='btn shadow-sm' href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">supprimer</a>
+                                <a class='btn shadow-sm text-danger' href="sup_taches.php?id_tach=<?php echo $tache['id_tach'];?>">supprimer</a>
                                 <hr>
-                                
                             </div>
                             
                 </li>
