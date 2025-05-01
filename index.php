@@ -8,12 +8,12 @@ $taches = $soum -> fetchAll();
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Gestion de tachest</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gestion de taches</title>
+    <link rel="stylesheet" href="Joshered/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1 class='titre'>Liste des taches</h1>
+    <header class="bg-success text-white">
+        <h1 class='h2 ms-2 pb-2' >Liste des taches</h1>
     </header>
     
     <form action="ajout_tache.php" method="POST">
