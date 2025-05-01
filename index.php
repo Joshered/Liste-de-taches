@@ -15,11 +15,19 @@ $taches = $soum -> fetchAll();
     <header class="bg-success text-white">
         <h1 class='h2 ms-2 pb-2' >Liste des taches</h1>
     </header>
-    <section class='container-fluid'>
-        <form action="ajout_tache.php" method="POST">
-            <input type="text" name='tache' placeholder="nouvelle teche" required>
-            <input class='btn' type="submit" value='ajouter'>
+    <section class='container-fluid- container-lg'>
+        <!-- Espace Ajouter Tache -->
+        <form action="ajout_tache.php" method="POST" class='row'>
+            <div class='col-lg-9'>
+                <input class="form-control md-2 form-control" type="text" name='tache' placeholder="nouvelle teche" required>
+            </div>
+            <div class='col-lg-3 d-flex flex-row-reverse flex-lg-row'>
+             <input class='col-lg-4 btn btn-success' type="submit" value='ajouter'>
+            </div>
+            
+            
         </form>
+        <!-- Affichage -->
         <ol type='1'>
             <?php foreach ($taches as $tache): ?>
                 <li>
